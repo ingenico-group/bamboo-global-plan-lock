@@ -1,0 +1,36 @@
+<atlassian-plugin key="${atlassian.plugin.key}"
+	name="${project.name}"
+	plugins-version="2">
+	<plugin-info>
+		<description>${project.description}</description>
+		<version>${project.version}</version>
+		<vendor name="${project.organization.name}" url="${project.organization.url}" />
+		<param name="plugin-icon">images/pluginIcon.png</param>
+		<param name="plugin-logo">images/pluginLogo.png</param>
+	</plugin-info>
+
+	<!-- add our i18n resource -->
+	<resource type="i18n"
+	name="i18n"
+		location="bamboo-plan-global-lock" />
+
+	<preChainAction 
+		key="globalPlanLockPreChainAction"
+		class="com.ingenico.bamboo.bpgl.impl.GlobalPlanLockPreChainAction">
+		<description>Ensure that only one plan sharing the same global lock is executed simultaneously</description>
+	</preChainAction>
+
+	<postBuildCompletedAction
+		key="globalPlanLockPostBuildCompleteAction"
+		class="com.ingenico.bamboo.bpgl.impl.GlobalPlanLockPostBuildCompleteAction">
+		<description>Cleans up the bloal plan lock when the build is completed</description>
+	</postBuildCompletedAction>
+
+	<additionalBuildConfigurationPlugin
+		key="applitoolsBuildConfig" 
+		name="Applitools build configuration"
+		class="com.ingenico.bamboo.bpgl.impl.config.CustomConfiguration">
+		<description>The custom plan configuration for the global locks</description>
+		<resource type="freemarker" name="edit" location="/templates/edit.ftl" />
+	</additionalBuildConfigurationPlugin>
+</atlassian-plugin>
