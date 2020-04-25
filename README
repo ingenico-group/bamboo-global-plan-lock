@@ -1,6 +1,6 @@
 # Global Plan Lock 
 
-This plugin enables a global lock for each plan even across agents. This means that every plan that has the same lock key can only be run exactly 
+This plugin enables a global lock for each plan even across agents. This means that every plan that has the same lock key can only be run exactly once.
 
 
 ## Build Locally
