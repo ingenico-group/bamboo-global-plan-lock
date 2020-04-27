@@ -27,8 +27,7 @@
 	</postBuildCompletedAction>
 
 	<additionalBuildConfigurationPlugin
-		key="applitoolsBuildConfig" 
-		name="Applitools build configuration"
+		key="globalPlanLockCustomConfiguration" 
 		class="com.ingenico.bamboo.bpgl.impl.config.CustomConfiguration">
 		<description>The custom plan configuration for the global locks</description>
 		<resource type="freemarker" name="edit" location="/templates/edit.ftl" />
