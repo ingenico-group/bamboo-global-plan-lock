@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
@@ -10,7 +9,8 @@
 
 	<scm>
 		<url>https://bitbucket.techno.ingenico.com/scm/~lusantos/bamboo-global-plan-lock.git</url>
-		<connection>scm:git:ssh://git@bitbucket.techno.ingenico.com:7999/~lusantos/bamboo-global-plan-lock.git</connection>
+		<connection>scm:git:ssh://git@bitbucket.techno.ingenico.com:7999/~lusantos/bamboo-global-plan-lock.git
+		</connection>
 	</scm>
 
 	<organization>
@@ -27,7 +27,8 @@
 	</developers>
 
 	<name>bamboo-plan-global-lock</name>
-	<description>This plugin enables a global lock for each plan even across agents. This means that every plan that has the same lock key can only be run exactly once.</description>
+	<description>This plugin enables a global lock for each plan even across agents. This means that every plan that has
+		the same lock key can only be run exactly once.</description>
 	<packaging>atlassian-plugin</packaging>
 
 	<properties>
@@ -119,7 +120,7 @@
 
 						<!-- Add package to export here -->
 						<!-- com.ingenico.bamboo.bpgl.api, -->
-						<Export-Package>	
+						<Export-Package>
 						</Export-Package>
 
 						<!-- Add package import here -->
@@ -159,5 +160,18 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Local repository</name>
+			<url>file://${user.home}/.m2/repository</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Local repository</name>
+			<url>file://${user.home}/.m2/repository</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
