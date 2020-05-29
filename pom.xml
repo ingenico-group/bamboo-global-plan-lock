@@ -4,13 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ingenico.bamboo.bpgl</groupId>
 	<artifactId>bamboo-plan-global-lock</artifactId>
-	<version>1.0.0</version>
+	<version>1.1.0-SNAPSHOT</version>
 
 	<scm>
 		<url>https://bitbucket.techno.ingenico.com/scm/~lusantos/bamboo-global-plan-lock.git</url>
 		<connection>scm:git:ssh://git@bitbucket.techno.ingenico.com:7999/~lusantos/bamboo-global-plan-lock.git
 		</connection>
-	  <tag>v1.0.0</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<organization>
