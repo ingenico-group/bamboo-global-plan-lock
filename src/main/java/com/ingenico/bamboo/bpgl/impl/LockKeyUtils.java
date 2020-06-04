@@ -1,30 +1,30 @@
 package com.ingenico.bamboo.bpgl.impl;
 
-import static com.ingenico.bamboo.bpgl.impl.LockingConfiguration.DEFAULT_GLOBAL_LOCK_KEY;
-import static com.ingenico.bamboo.bpgl.impl.LockingConfiguration.GLOBAL_LOCK_ENABLED;
-import static com.ingenico.bamboo.bpgl.impl.LockingConfiguration.GLOBAL_LOCK_KEY;
+import com.atlassian.bamboo.build.BuildDefinition;
 
 import java.util.Map;
 import java.util.Optional;
 
-import com.atlassian.bamboo.build.BuildDefinition;
+import static com.ingenico.bamboo.bpgl.impl.LockingConfiguration.DEFAULT_GLOBAL_LOCK_KEY;
+import static com.ingenico.bamboo.bpgl.impl.LockingConfiguration.GLOBAL_LOCK_ENABLED;
+import static com.ingenico.bamboo.bpgl.impl.LockingConfiguration.GLOBAL_LOCK_KEY;
 
-public abstract class LockKeyUtils {
+public final class LockKeyUtils {
 
-	private LockKeyUtils() {
-		// nop
-	}
+    private LockKeyUtils() {
+        // nop
+    }
 
-	public static Optional<String> getLockKey(BuildDefinition buildDefinition) {
-		Map<String, String> planConfiguration = buildDefinition.getCustomConfiguration();
+    public static Optional<String> getLockKey(final BuildDefinition buildDefinition) {
+        final Map<String, String> planConfiguration = buildDefinition.getCustomConfiguration();
 
-		boolean hasLockEnabled = Boolean.valueOf(planConfiguration.getOrDefault(GLOBAL_LOCK_ENABLED, "false"));
+        final boolean hasLockEnabled = Boolean.parseBoolean(planConfiguration.getOrDefault(GLOBAL_LOCK_ENABLED, "false"));
 
-		if (hasLockEnabled) {
-			return Optional.of(planConfiguration.getOrDefault(GLOBAL_LOCK_KEY, DEFAULT_GLOBAL_LOCK_KEY));
-		}
+        if (hasLockEnabled) {
+            return Optional.of(planConfiguration.getOrDefault(GLOBAL_LOCK_KEY, DEFAULT_GLOBAL_LOCK_KEY));
+        }
 
-		return Optional.empty();
-	}
+        return Optional.empty();
+    }
 
 }
