@@ -29,8 +29,8 @@
     </developers>
 
     <scm>
-        <url>https://bitbucket.techno.ingenico.com/scm/~lusantos/bamboo-global-plan-lock.git</url>
-        <connection>scm:git:ssh://git@bitbucket.techno.ingenico.com:7999/~lusantos/bamboo-global-plan-lock.git</connection>
+        <url>https://github.com/ingenico-group/bamboo-global-plan-lock.git</url>
+        <connection>scm:git:git@github.com:ingenico-group/bamboo-global-plan-lock.git</connection>
         <tag>HEAD</tag>
     </scm>
 

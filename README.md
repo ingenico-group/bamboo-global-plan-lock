@@ -7,7 +7,9 @@ This plugin enables a global lock for each plan even across agents. This means t
 
 1 - Setup the Atlassian SDK and follow the tutorial (https://developer.atlassian.com/server/framework/atlassian-sdk/set-up-the-atlassian-plugin-sdk-and-build-a-project/)
 
-2 - Launch Bamboo with this plugin with `atlas-run` (or `atlas-debug` to allow a debugger to attach to port 5005)
+2 - Launch Bamboo with this plugin with `atlas-run --product bamboo≈` (or `atlas-debug` to allow a debugger to attach to port 5005)
+    (Default username/password: admin/admin)
+    (To run a different version use the `-version x.y.z` parameter)
 
 3 - While bamboo is running use `atlas-mvn package` to repackage the plugin and reload in bamboo
 
