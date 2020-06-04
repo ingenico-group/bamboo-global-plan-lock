@@ -5,7 +5,7 @@
 
     <groupId>com.ingenico.bamboo.bpgl</groupId>
     <artifactId>bamboo-plan-global-lock</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0-SNAPSHOT</version>
 
     <packaging>atlassian-plugin</packaging>
 
@@ -30,7 +30,7 @@
     <scm>
         <url>https://github.com/ingenico-group/bamboo-global-plan-lock.git</url>
         <connection>scm:git:git@github.com:ingenico-group/bamboo-global-plan-lock.git</connection>
-        <tag>v1.1.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <!-- hack to build/package/release locally -->
