@@ -54,8 +54,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <!-- bamboo version configuration -->
-        <bamboo.version>6.8.0</bamboo.version>
-        <bamboo.data.version>6.8.0</bamboo.data.version>
+        <bamboo.version>6.6.3</bamboo.version>
+        <bamboo.data.version>6.6.3</bamboo.data.version>
         <amps.version>8.0.2</amps.version>
 
         <plugin.testrunner.version>2.0.1</plugin.testrunner.version>
